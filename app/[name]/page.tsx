@@ -1,6 +1,6 @@
 import { PROJECT_DETAILS } from "@/data/data";
 import { notFound } from "next/navigation";
-import ProjectDetails from "@/components/ProjectDetails";
+import ProjectDetails from "@/components/projectDetails/ProjectDetails";
 
 // Define the type for params
 type Props = {
