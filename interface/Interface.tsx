@@ -29,3 +29,17 @@ export interface IProjectDetails {
   vercel?: string;
   github?: string;
 }
+
+export interface ProjectImage {
+  src: string;
+  alt?: string;
+}
+
+export interface Project {
+  name: string;
+  github?: string;
+  vercel?: string;
+  description: string;
+  tech: string[];
+  images: ProjectImage[];
+}
