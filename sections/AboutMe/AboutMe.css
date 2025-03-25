@@ -1,0 +1,37 @@
+.AboutMe {
+  z-index: 1;
+  position: relative;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  margin-top: 7rem;
+  text-align: justify;
+  text-justify: inter-word;
+  display: grid;
+  grid-template-areas:
+    "AboutMe-card AboutMe-card Card"
+    "Skills video video";
+  gap: 1rem;
+  margin-block-end: 4rem;
+
+  @media (max-width: 1200px) {
+    width: 50rem;
+  }
+
+  @media (max-width: 900px) {
+    width: 36rem;
+    grid-template-areas:
+      "AboutMe-card AboutMe-card AboutMe-card "
+      "Card Card Card"
+      "Skills Skills Skills"
+      "video video video";
+  }
+
+  @media (max-width: 700px) {
+    width: 30rem;
+  }
+  @media (max-width: 550px) {
+    width: 21rem;
+    margin-top: 2rem;
+    margin-block-end: 2rem;
+  }
+}

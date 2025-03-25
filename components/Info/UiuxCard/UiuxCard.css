@@ -1,0 +1,26 @@
+  .card-uiux {
+    background-color: var(--color-card-background);
+    box-shadow: var(--shadow-card);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    grid-area: uiux;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-block-end: 1rem;
+    }
+    .img2 {
+      position: absolute;
+      bottom: 0%;
+      left: 95%;
+      width: 6rem;
+    }
+
+    @media (max-width: 700px) {
+      .img2 {
+        display: none;
+      }
+    }
+  }

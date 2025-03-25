@@ -1,0 +1,34 @@
+.layout-uiux {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-areas:
+    "uiux uiux  uiux "
+    "Skills video video";
+  gap: 1rem;
+  padding-bottom: 4rem;
+
+  @media (max-width: 1200px) {
+    width: 50rem;
+  }
+
+  @media (max-width: 900px) {
+    width: 36rem;
+    grid-template-areas:
+      "uiux uiux uiux"
+      "Skills Skills Skills"
+      "video video video";
+  }
+
+  @media (max-width: 700px) {
+    width: 30rem;
+  }
+  @media (max-width: 550px) {
+    width: 21rem;
+    margin-top: 0.5rem;
+    .layout-uiux {
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@layer components {
+  .profile {
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    outline: 3px solid var(--color-gray-900);
+    outline-offset: -1px;
+    background-color: var(--color-gray-900);
+  }
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

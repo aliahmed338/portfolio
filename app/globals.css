@@ -1,42 +1,244 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer reset, variables, base, themes, components;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  /* html {
+    scrollbar-gutter: stable;
+  } */
+  body {
+    line-height: 1.5;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@layer variables {
+  :root {
+    --font-work-sans: "Work Sans";
+    --color-text: hsl(0deg 0% 5%);
+    --color-primary-100: hsl(240deg 100% 90%);
+    --color-primary-300: hsl(242deg 100% 70%);
+    --color-primary-500: hsl(245deg 100% 60%);
+    --color-primary-700: hsl(250deg 100% 33%);
+    --color-primary-900: hsl(256deg 100% 20%);
+    --color-primary-contrast: white;
+    --color-secondary-500: hsl(328deg 100% 50%);
+    --color-decorative-100: hsl(50deg 100% 94%);
+    --color-decorative-200: hsl(50deg 100% 90%);
+    --color-decorative-300: hsl(50deg 100% 85%);
+    --color-decorative-500: hsl(50deg 100% 70%);
+    --color-decorative-600: hsl(50deg 100% 60%);
+    --color-decorative-700: hsl(50deg 100% 50%);
+    --color-decorative-800: hsl(50deg 100% 33%);
+    --color-decorative-900: hsl(50deg 100% 25%);
+
+    --color-gray-0: white;
+    --color-gray-100: hsl(50deg 20% 90%);
+    --color-gray-200: hsl(50deg 15% 85%);
+    --color-gray-300: hsl(50deg 10% 70%);
+    --color-gray-500: hsl(50deg 4% 50%);
+    --color-gray-700: hsl(50deg 10% 25%);
+    --color-gray-900: hsl(50deg 20% 10%);
+    --color-gray-1000: black;
+
+    --shadow-page: 0px 1px 2px hsl(50deg 60% 50% / 0.25),
+      0px 3px 6px hsl(50deg 60% 50% / 0.25),
+      0px 9px 18px hsl(50deg 60% 50% / 0.25),
+      0px 18px 36px hsl(50deg 60% 50% / 0.25),
+      0px 54px 108px hsl(50deg 60% 50% / 0.25);
+
+    --shadow-card: 0px 1px 2px hsl(50deg 20% 50% / 0.2),
+      0px 2px 4px hsl(50deg 20% 50% / 0.2), 0px 4px 8px hsl(50deg 20% 50% / 0.2),
+      0px 8px 16px hsl(50deg 20% 50% / 0.2);
+
+    --font-family: "Work Sans";
+
+    --content-width: 65rem;
+    /* 52rem default */
+
+    --color-primary: var(--color-primary-500);
+    --color-secondary: var(--color-secondary-500);
+    --color-inline-code-bg: hsl(45deg 74% 85%);
+    --color-selection-text: black;
+    --color-selection-background: var(--color-decorative-700);
+    --color-backdrop: var(--color-decorative-500);
+    --color-backdrop-highlight: var(--color-decorative-300);
+    --color-page-background: var(--color-decorative-100);
+    --color-page-border: transparent;
+    --color-card-background: var(--color-gray-0);
+    --color-card-border: transparent;
+  }
+
+  :root.dark {
+    --font-work-sans: "Work Sans";
+    --color-text: hsl(0deg 0% 100%);
+    --color-primary-100: hsl(50deg 100% 90%);
+    --color-primary-300: hsl(50deg 100% 70%);
+    --color-primary-500: hsl(50deg 100% 50%);
+    --color-primary-700: hsl(50deg 100% 35%);
+    --color-primary-900: hsl(50deg 100% 25%);
+    --color-primary-contrast: black;
+
+    --color-decorative-100: hsl(256deg 20% 4%);
+    --color-decorative-200: hsl(256deg 30% 10%);
+    --color-decorative-300: hsl(256deg 30% 15%);
+    --color-decorative-500: hsl(256deg 40% 30%);
+    --color-decorative-600: hsl(256deg 40% 40%);
+    --color-decorative-700: hsl(256deg 40% 50%);
+    --color-decorative-800: hsl(256deg 45% 65%);
+    --color-decorative-900: hsl(256deg 55% 80%);
+
+    --color-gray-0: black;
+    --color-gray-100: hsl(256deg 20% 10%);
+    --color-gray-200: hsl(256deg 15% 15%);
+    --color-gray-300: hsl(256deg 10% 30%);
+    --color-gray-500: hsl(256deg 4% 50%);
+    --color-gray-700: hsl(256deg 10% 75%);
+    --color-gray-900: hsl(256deg 20% 90%);
+    --color-gray-1000: white;
+
+    --color-background: hsl(255, 17%, 14%);
+
+    --color-primary: var(--color-primary-500);
+    --color-secondary: var(--color-secondary-500);
+    --color-inline-code-bg: hsl(45deg 74% 85%);
+    --color-selection-text: black;
+    --color-selection-background: var(--color-decorative-700);
+    --color-backdrop: var(--color-decorative-100);
+    --color-backdrop-highlight: var(--color-decorative-200);
+    --color-page-background: var(--color-decorative-200);
+    --color-page-border: transparent;
+    --color-card-background: var(--color-background);
+    --color-card-border: transparent;
+
+    --shadow-page: none;
+    --shadow-card: none;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer themes {
   html {
-    color-scheme: dark;
+    color: var(--color-text);
+    font-family: var(--font-family), sans-serif;
+    letter-spacing: -0.03125em;
+    background-color: var(--color-backdrop-highlight);
+    transition: var(--transition);
+  }
+
+  ::selection {
+    background-color: var(--color-selection-background) !important;
+    color: var(--color-selection-text) !important;
+    background-image: none !important;
+    -webkit-text-fill-color: var(--color-selection-text) !important;
+    -moz-text-fill-color: var(--color-selection-text) !important;
+    background-image: none !important;
+    background-clip: revert !important;
+    -webkit-background-clip: revert !important;
+    text-shadow: none !important;
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--font-work-sans), sans-serif;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-backdrop);
+    border-bottom: 3px solid var(--color-decorative-600);
+    position: relative;
+    isolation: isolate;
+    animation: start 3s;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    background: linear-gradient(
+      to top,
+      var(--color-backdrop),
+      var(--color-backdrop-highlight)
+    );
+    /* background-image: url(../public/noise.png); */
+
+    z-index: 0;
+  }
+
+  @keyframes start {
+    0% {
+      opacity: 0;
+      padding-block-start: 5rem;
+    }
+    100% {
+      opacity: 1;
+      padding-block-start: 0px;
+    }
+  }
+
+  em {
+    font-style: italic;
+  }
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 650;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+  }
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
+  }
+  a {
+    color: currentColor;
+    text-decoration-color: var(--color-primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.125em;
+    font-weight: 500;
+    transition: all 200ms;
+  }
+  a:hover {
+    text-underline-offset: 0.175em;
   }
 }

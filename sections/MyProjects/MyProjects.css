@@ -1,0 +1,101 @@
+.mywork {
+  background-color: var(--color-page-background);
+  border: var(--color-card-border);
+  box-shadow: var(--shadow-page);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  max-width: var(--content-width);
+  margin: 0 auto;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .project {
+      background-color: var(--color-card-background);
+      box-shadow: var(--shadow-card);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -1px;
+        margin: 0;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .content p {
+        margin: 0;
+        padding-inline-start: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+
+      .git-vercel {
+        padding-block: 1rem;
+        padding-inline-start: 1rem;
+        display: flex;
+        gap: 1rem;
+
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+    .project img {
+      border-radius: 0.2rem;
+    }
+  }
+
+  .project-message {
+    text-align: center;
+    padding-block-start: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 50rem;
+    .projects {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 36rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 30rem;
+  }
+  @media (max-width: 550px) {
+    width: 21rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .project .project-img {
+    height: 13.5rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    background-color: red;
+  }
+}

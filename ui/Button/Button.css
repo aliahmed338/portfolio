@@ -1,0 +1,31 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-0);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border: none;
+  border-radius: 0.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: var(--color-decorative-500);
+    color: var(--color-gray-900);
+  }
+
+  &:active {
+    transform: scale(0.9);
+    background-color: var(--color-decorative-500);
+    color: var(--color-gray-900);
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+  }
+}

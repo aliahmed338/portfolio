@@ -1,0 +1,55 @@
+.Card-Game {
+  grid-area: Card;
+  background-color: var(--color-card-background);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  padding-block-start: 10rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.Card-Game .game-name {
+  background-color: var(--color-decorative-500);
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+}
+.Card-Game .img {
+  width: 12rem;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: -5rem;
+  border: 3px solid var(--color-gray-900);
+}
+@media (max-width: 900px) {
+  .Card-Game .img {
+    position: relative;
+  }
+}
+
+@media (max-width: 700px) {
+  .Card-Game {
+    position: relative;
+  }
+}
+
+@media (max-width: 500px) {
+  .Card-Game .img {
+    position: relative;
+    background-color: red;
+    padding-block-end: -1rem;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    left: 85%;
+    bottom: 30%;
+  }
+  100% {
+    left: 20%;
+    bottom: 10%;
+  }
+}

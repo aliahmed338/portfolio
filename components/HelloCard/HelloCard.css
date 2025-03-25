@@ -1,0 +1,16 @@
+.AboutMe-card {
+  grid-area: AboutMe-card;
+  background-color: var(--color-card-background);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.btn-layout {
+  display: flex;
+  gap: 1rem;
+}
+
+.Mycv {
+  padding-top: 0.8rem;
+}

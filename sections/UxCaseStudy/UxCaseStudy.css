@@ -1,0 +1,104 @@
+.myworkux {
+  background-color: var(--color-page-background);
+  border: var(--color-card-border);
+  box-shadow: var(--shadow-page);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: var(--content-width);
+  margin: 4rem auto;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .projectsux {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .projectux {
+      background-color: var(--color-card-background);
+      box-shadow: var(--shadow-card);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .project-titleux {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -1px;
+        margin: 0;
+      }
+      .contentux {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .contentux p {
+        margin: 0;
+        padding-inline-start: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+
+      .Behance {
+        padding-block: 1rem;
+        padding-inline-start: 1rem;
+        display: flex;
+        gap: 1rem;
+
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+    .projectux img {
+      border-radius: 0.2rem;
+    }
+  }
+
+  .project-messageux {
+    text-align: center;
+    padding-block-start: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    a {
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    width: 50rem;
+    .projectsux {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 36rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 30rem;
+  }
+  @media (max-width: 550px) {
+    width: 21rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .projectux .project-imgux {
+    height: 13.5rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    background-color: red;
+  }
+}
