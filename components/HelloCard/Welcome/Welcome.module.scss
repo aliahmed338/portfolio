@@ -1,16 +1,16 @@
-.profile-content {
+.profilecontent {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   padding-bottom: 1rem;
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-  }
 
   @media (max-width: 550px) {
     flex-direction: column-reverse;
   }
+}
+
+.profilecontent h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
 }

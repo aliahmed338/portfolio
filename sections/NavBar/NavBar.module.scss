@@ -39,6 +39,7 @@
 .icons {
   display: flex;
   gap: 1.5rem;
+  cursor: pointer;
 }
 
 .icon {
@@ -49,7 +50,6 @@
   background-color: transparent;
   border-radius: 50%;
   transition: transform 1s ease;
-  cursor: pointer;
 }
 
 .icon:hover {

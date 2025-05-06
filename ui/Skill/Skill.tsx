@@ -1,6 +1,6 @@
 "use client";
-import { ReactNode, useCallback, useEffect, useState } from "react";
-import "./Skill.css";
+import { ReactNode } from "react";
+import style from "./Skill.module.css";
 import useSound from "use-sound";
 
 interface SkillProps {
@@ -10,38 +10,15 @@ interface SkillProps {
 
 export default function Skill({ children, href }: SkillProps) {
   const popSound = "/Sound/pop.mp3";
-  const [isAllowed, setIsAllowed] = useState(false);
   const [popPlay] = useSound(popSound);
 
-  useEffect(() => {
-    const enableAudio = () => {
-      setIsAllowed(true);
-      window.removeEventListener("mousemove", enableAudio);
-      window.removeEventListener("keydown", enableAudio);
-      window.removeEventListener("click", enableAudio);
-    };
-
-    // انتظار أول تفاعل للمستخدم
-    window.addEventListener("mousemove", enableAudio);
-    window.addEventListener("keydown", enableAudio);
-    window.addEventListener("click", enableAudio);
-
-    return () => {
-      window.removeEventListener("mousemove", enableAudio);
-      window.removeEventListener("keydown", enableAudio);
-      window.removeEventListener("click", enableAudio);
-    };
-  }, []);
-
-  const handleMouseEnter = useCallback(() => {
-    if (isAllowed) {
-      popPlay();
-    }
-  }, [isAllowed, popPlay]);
+  const handleMouseEnter = () => {
+    popPlay();
+  };
 
   return (
     <a
-      className="skill"
+      className={style.skill}
       href={href}
       target="_blank"
       onMouseEnter={handleMouseEnter}

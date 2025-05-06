@@ -3,7 +3,7 @@
 import { Send, Code } from "react-feather";
 import Welcome from "@/components/HelloCard/Welcome/Welcome";
 import Button from "@/ui/Button/Button";
-import "./HelloCard.css";
+import style from "./HelloCard.module.css";
 import useSound from "use-sound";
 
 export default function HelloCard() {
@@ -11,12 +11,12 @@ export default function HelloCard() {
   const [fly] = useSound(flySound, { volume: 0.5 });
 
   const handleClick = (sectionId: string) => {
-    fly();
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    fly();
   };
 
   return (
-    <div className="AboutMe-card">
+    <div className={style.AboutMecard}>
       <Welcome />
       <p>
         I started web development with React and front-end technologies and have
@@ -33,11 +33,11 @@ export default function HelloCard() {
         projects.
       </p>
 
-      <div className="btn-layout">
+      <div className={style.btnlayout}>
         <Button onClick={() => handleClick("section2")}>
           My Work <Code size="1.1rem" />
         </Button>
-        <Button onClick={() => handleClick("section-3")}>
+        <Button onClick={() => handleClick("contactme")}>
           Contact Me <Send size="1.1rem" />
         </Button>
         <a

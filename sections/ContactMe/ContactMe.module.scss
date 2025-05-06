@@ -9,24 +9,13 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 
-  h3 {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  .social-layout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   @media (max-width: 1200px) {
     width: 50rem;
   }
 
   @media (max-width: 900px) {
     width: 36rem;
-    .social-layout {
+    .sociallayout {
       justify-content: flex-start;
       gap: 1rem;
     }
@@ -38,4 +27,15 @@
   @media (max-width: 550px) {
     width: 21rem;
   }
+}
+
+.page h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page .sociallayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

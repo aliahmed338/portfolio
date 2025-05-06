@@ -1,13 +1,13 @@
-import noteApp from "@/public/projects/note-app.png";
-import freshApp from "@/public/projects/fresh-app.png";
-import portoApp from "@/public/projects/porto-app.png";
-import cvApp from "@/public/projects/cv-app.png";
-import Exclucive from "@/public/projects/screencapture-e-commerce-v1-ochre-vercel-app-2024-07-27-16_20_53.png";
-import cyborg from "@/public/projects/screencapture-cyborg-mu-vercel-app-2024-07-27-16_27_43.png";
-import wordGame from "@/public/projects/word-game.png";
-import WeatherApp from "@/public/projects/weather-app.png";
-import Book from "@/public/projects/Book.png";
-import Tawaazon from "@/public/projects/tawaazon.png";
+import noteApp from "@/public/projects/note-app.webp";
+import freshApp from "@/public/projects/fresh-app.webp";
+import portoApp from "@/public/projects/porto-app.webp";
+import cvApp from "@/public/projects/cv-app.webp";
+import Exclucive from "@/public/projects/screencapture-e-commerce-v1-ochre-vercel-app-2024-07-27-16_20_53.webp";
+import cyborg from "@/public/projects/screencapture-cyborg-mu-vercel-app-2024-07-27-16_27_43.webp";
+import wordGame from "@/public/projects/word-game.webp";
+import WeatherApp from "@/public/projects/weather-app.webp";
+import Book from "@/public/projects/Book.webp";
+import Tawaazon from "@/public/projects/tawaazon.webp";
 import { Iprojects, Iskills, Isocialmedia } from "@/interface/Interface";
 
 export const SKILLS: Iskills[] = [
@@ -27,10 +27,10 @@ export const SKILLS: Iskills[] = [
     id: "typeScript",
     children: "Type Script",
   },
-  {
-    id: "bootstrap",
-    children: "Bootstrap",
-  },
+  // {
+  //   id: "bootstrap",
+  //   children: "Bootstrap",
+  // },
   {
     id: "tailwind",
     children: "Tailwind Css",
@@ -40,16 +40,40 @@ export const SKILLS: Iskills[] = [
     children: "react",
   },
   {
-    id: "redux",
-    children: "redux",
+    id: "redux-toolkit",
+    children: "redux-toolkit",
   },
   {
     id: "axios",
     children: "axios",
   },
   {
+    id: "react-hook-form",
+    children: "react-hook-form",
+  },
+  {
+    id: "Yup",
+    children: "Yup",
+  },
+  {
+    id: "zod",
+    children: "zod",
+  },
+  {
     id: "React-Router",
     children: "React Router",
+  },
+  {
+    id: "Next.js",
+    children: "Next.js",
+  },
+  {
+    id: "Postgresql",
+    children: "Postgresql",
+  },
+  {
+    id: "prisma",
+    children: "Prisma",
   },
   {
     id: "Ui-design",
@@ -68,8 +92,16 @@ export const SKILLS: Iskills[] = [
     children: "shadcn ui",
   },
   {
+    id: "git",
+    children: "git",
+  },
+  {
     id: "github",
     children: "github",
+  },
+  {
+    id: "redux",
+    children: "redux",
   },
 ];
 

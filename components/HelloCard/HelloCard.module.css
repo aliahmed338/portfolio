@@ -1,4 +1,4 @@
-.AboutMe-card {
+.AboutMecard {
   grid-area: AboutMe-card;
   background-color: var(--color-card-background);
   box-shadow: var(--shadow-card);
@@ -6,7 +6,7 @@
   border-radius: 0.5rem;
 }
 
-.btn-layout {
+.btnlayout {
   display: flex;
   gap: 1rem;
 }

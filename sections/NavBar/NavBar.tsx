@@ -2,51 +2,50 @@
 
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "react-feather";
+import style from "./NavBar.module.scss";
 import useSound from "use-sound";
-import "./NavBar.css";
 
 export default function NavBar() {
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
-
-  const flySound = "/Sound/sound.wav";
-  const [play] = useSound(flySound, { volume: 0.5 });
+  const Sound = "/Sound/sound.wav";
+  const [fly] = useSound(Sound, { volume: 1 });
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedTheme = localStorage.getItem("theme") === "dark";
-      setDarkMode(storedTheme);
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setDarkMode(false);
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
   function ModeEffect() {
     if (darkMode === null) return;
 
-    setDarkMode(!darkMode);
-    play();
-  }
+    const newMode = !darkMode;
+    setDarkMode(newMode);
 
-  useEffect(() => {
-    if (darkMode === null) return; // تأكد من عدم التحديث بدون قيمة
+    localStorage.setItem("theme", newMode ? "dark" : "light");
 
-    if (darkMode) {
+    if (newMode) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
     }
-  }, [darkMode]);
+    fly();
+  }
 
   return (
-    <div className="container">
-      <h1 className="Logo">A.Developer</h1>
-      <div className="icons">
-        {darkMode !== null &&
-          (darkMode ? (
-            <Sun className="icon" size="1.5rem" onClick={ModeEffect} />
-          ) : (
-            <Moon className="icon" size="1.5rem" onClick={ModeEffect} />
-          ))}
+    <div className={style.container}>
+      <h1 className={style.Logo}>A.Developer</h1>
+      <div className={style.icons}>
+        {darkMode ? (
+          <Sun className="icon" size="1.5rem" onClick={ModeEffect} />
+        ) : (
+          <Moon className="icon" size="1.5rem" onClick={ModeEffect} />
+        )}
       </div>
     </div>
   );

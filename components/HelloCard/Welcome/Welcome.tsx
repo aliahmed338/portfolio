@@ -1,8 +1,8 @@
 import ProfileImage from "@/ui/Profile/ProfileImage";
-import "./Welcome.css";
+import style from "./Welcome.module.scss";
 export default function Welcome() {
   return (
-    <div className="profile-content">
+    <div className={style.profilecontent}>
       <h1>Hi there! I&rsquo;m Ali.</h1>
       <ProfileImage />
     </div>

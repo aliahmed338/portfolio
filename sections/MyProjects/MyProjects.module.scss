@@ -8,12 +8,6 @@
   max-width: var(--content-width);
   margin: 0 auto;
 
-  h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-  }
-
   .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -28,7 +22,7 @@
       flex-direction: column;
       gap: 0.5rem;
 
-      .project-title {
+      .projecttitle {
         font-size: 1.5rem;
         font-weight: 600;
         letter-spacing: -1px;
@@ -47,7 +41,7 @@
         font-size: 1rem;
       }
 
-      .git-vercel {
+      .gitvercel {
         padding-block: 1rem;
         padding-inline-start: 1rem;
         display: flex;
@@ -63,7 +57,13 @@
     }
   }
 
-  .project-message {
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .projectmessage {
     text-align: center;
     padding-block-start: 2rem;
     font-size: 1.5rem;
@@ -89,13 +89,5 @@
     width: 21rem;
     padding: 1rem;
     border-radius: 1rem;
-  }
-
-  .project .project-img {
-    height: 13.5rem;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-    background-color: red;
   }
 }

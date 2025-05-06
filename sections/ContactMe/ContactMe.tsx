@@ -1,17 +1,17 @@
 import { SOCIAL_MEDIA } from "../../data/data";
 import Skill from "@/ui/Skill/Skill";
-import "./ContactMe.css";
+import style from "./ContactMe.module.scss";
 export default function ContactMe() {
   return (
-    <div id="section-3" className="page">
+    <section id="contactme" className={style.page}>
       <h3>Contact Me</h3>
-      <div className="social-layout">
+      <div className={style.sociallayout}>
         {SOCIAL_MEDIA.map((SOCIAL) => (
           <Skill href={SOCIAL.href} key={SOCIAL.name}>
             {SOCIAL.name}
           </Skill>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

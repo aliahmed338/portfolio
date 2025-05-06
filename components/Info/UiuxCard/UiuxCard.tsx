@@ -1,8 +1,8 @@
-import "./UiuxCard.css";
+import style from "./UiuxCard.module.scss";
 
 export default function UiuxCard() {
   return (
-    <div className="card-uiux">
+    <div className={style.carduiux}>
       <h3>What I Do</h3>
       <p>
         I’m a Front-End Developer specializing in React.js, working with both
