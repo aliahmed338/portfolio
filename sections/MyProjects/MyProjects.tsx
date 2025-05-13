@@ -37,7 +37,7 @@ export default function MyProjects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  vercel
+                  live
                 </a>
               ) : (
                 ""
