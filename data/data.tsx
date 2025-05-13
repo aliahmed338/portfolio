@@ -101,10 +101,10 @@ export const SKILLS: Iskills[] = [
     id: "github",
     children: "github",
   },
-  {
-    id: "redux",
-    children: "redux",
-  },
+  // {
+  //   id: "redux",
+  //   children: "redux",
+  // },
 ];
 
 export const PROJECTS: Iprojects[] = [
