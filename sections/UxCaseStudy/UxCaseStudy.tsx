@@ -3,18 +3,22 @@ import { UXCASESTUDY } from "@/data/data";
 import style from "./UxCaseStudy.module.scss";
 export default function UxCaseStudy() {
   return (
-    <div id="section3" className={style.myworkux}>
+    <div id="section3" className={style.mywork}>
       <h3>Case Studies</h3>
-      <div className={style.projectsux}>
+      <div className={style.projects}>
         {UXCASESTUDY.map((project) => (
-          <div key={project.id} className={style.projectux}>
+          <div key={project.id} className={style.project}>
             <Image
-              className={style.projectimgux}
+              className={style.projectimg}
               src={project.image}
               alt={project.name}
+              height={216}
+              width={600}
+              style={{ objectFit: "cover", objectPosition: "top" }}
+              loading="lazy"
             />
-            <p className={style.projecttitleux}>{project.name}</p>
-            <div className={style.contentux}>
+            <p className={style.projecttitle}>{project.name}</p>
+            <div className={style.content}>
               {project.description.map((description, index) => (
                 <p key={index}>{description}</p>
               ))}
@@ -31,7 +35,7 @@ export default function UxCaseStudy() {
           </div>
         ))}
       </div>
-      <div className={style.projectmessageux}>
+      <div className={style.projectmessage}>
         If you want to see more, check out my{" "}
         <a href="https://www.behance.net/3ea1f0ee" target="_blank">
           Behance

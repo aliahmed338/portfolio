@@ -8,6 +8,8 @@ import wordGame from "@/public/projects/word-game.webp";
 import WeatherApp from "@/public/projects/weather-app.webp";
 import Book from "@/public/projects/Book.webp";
 import Tawaazon from "@/public/projects/tawaazon.webp";
+import EasyInvo from "@/public/projects/invoice.webp";
+import Article from "@/public/projects/article.webp";
 import { Iprojects, Iskills, Isocialmedia } from "@/interface/Interface";
 
 export const SKILLS: Iskills[] = [
@@ -108,6 +110,18 @@ export const SKILLS: Iskills[] = [
 export const PROJECTS: Iprojects[] = [
   {
     id: 1,
+    name: "EasyInvo",
+    description: [
+      "- A powerful invoicing app built with Next.js and Prisma.",
+      "- Includes full auth system and CRUD for invoices.",
+      "- Supports Stripe payments, email via Resend & React Email.",
+    ],
+    image: EasyInvo,
+    github: "https://github.com/aliahmed200/invoice-app",
+    vercel: "https://invoice-app-flax-seven.vercel.app/",
+  },
+  {
+    id: 2,
     name: "Exclusive",
     description: [
       "- An advanced e-commerce website with React.js.",
@@ -119,7 +133,7 @@ export const PROJECTS: Iprojects[] = [
     vercel: "https://e-commerce-v1-ochre.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     name: "Note App",
     description: [
       "- A simple note-taking app with React.js.",
@@ -131,7 +145,19 @@ export const PROJECTS: Iprojects[] = [
     vercel: "https://note-app-my-new-branch.vercel.app/login",
   },
   {
-    id: 3,
+    id: 4,
+    name: "Article",
+    description: [
+      "- A full-stack article platform built with Next.js and Prisma.",
+      "- Role-based access for admins and users with full auth.",
+      "- Features article CRUD, Tailwind UI, and NeonDB integration.",
+    ],
+    image: Article,
+    github: "https://github.com/aliahmed200/article-app",
+    vercel: "https://article-full-stack-app-next.vercel.app/",
+  },
+  {
+    id: 5,
     name: "Wordle",
     description: [
       "- Classic word guessing game built with React & TypeScript",
@@ -143,7 +169,7 @@ export const PROJECTS: Iprojects[] = [
     github: "https://github.com/aliahmed200/Word-Game",
   },
   {
-    id: 4,
+    id: 6,
     name: "Weather App",
     description: [
       "- Real-time weather forecasting web application",
@@ -155,7 +181,7 @@ export const PROJECTS: Iprojects[] = [
     github: "https://github.com/aliahmed200/weather-app",
   },
   {
-    id: 5,
+    id: 7,
     name: "Fresh Cart",
     description: [
       "- An online shopping platform built with React.js.",
@@ -166,7 +192,7 @@ export const PROJECTS: Iprojects[] = [
     github: "https://github.com/aliahmed200/E-commerce",
   },
   {
-    id: 6,
+    id: 8,
     name: "JobJunction",
     description: [
       "- A CV builder app using React and Tailwind CSS.",
@@ -178,7 +204,7 @@ export const PROJECTS: Iprojects[] = [
     github: "https://github.com/aliahmed200/cv-builder",
   },
   {
-    id: 7,
+    id: 9,
     name: "My Old Portfolio",
     description: [
       "- A modern portfolio built with React and TypeScript.",
@@ -190,7 +216,7 @@ export const PROJECTS: Iprojects[] = [
     github: "https://github.com/aliahmed200/portfolio",
   },
   {
-    id: 8,
+    id: 10,
     name: "CYBORG",
     description: [
       "- A dynamic gaming website with React and TypeScript.",
