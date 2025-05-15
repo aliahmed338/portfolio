@@ -3,15 +3,19 @@ import Skill from "@/ui/Skill/Skill";
 import style from "./ContactMe.module.scss";
 export default function ContactMe() {
   return (
-    <footer id="contactme" className={style.page}>
+    <footer
+      id="contactme"
+      className={style.page}
+      aria-label="Contact Me Section"
+    >
       <h2>Contact Me</h2>
-      <div className={style.sociallayout}>
+      <ul className={style.sociallayout}>
         {SOCIAL_MEDIA.map((SOCIAL) => (
-          <Skill href={SOCIAL.href} key={SOCIAL.name}>
-            {SOCIAL.name}
-          </Skill>
+          <li key={SOCIAL.name} className={style.list}>
+            <Skill href={SOCIAL.href}>{SOCIAL.name}</Skill>
+          </li>
         ))}
-      </div>
+      </ul>
     </footer>
   );
 }

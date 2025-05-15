@@ -1,6 +1,5 @@
 "use client";
 import { ReactNode } from "react";
-import style from "./Skill.module.css";
 import useSound from "use-sound";
 
 interface SkillProps {
@@ -17,12 +16,7 @@ export default function Skill({ children, href }: SkillProps) {
   };
 
   return (
-    <a
-      className={style.skill}
-      href={href}
-      target="_blank"
-      onMouseEnter={handleMouseEnter}
-    >
+    <a href={href} target="_blank" onMouseEnter={handleMouseEnter}>
       {children}
     </a>
   );

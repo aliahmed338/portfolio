@@ -6,11 +6,13 @@ export default function SkillsCard() {
   return (
     <article className={style.Skillscard}>
       <h2>see some of my skills</h2>
-      <div className={style.Skillscontent}>
+      <ul className={style.Skillscontent}>
         {SKILLS.map((skill) => (
-          <Skill key={skill.id}>{skill.children}</Skill>
+          <li className={style.list} key={skill.id}>
+            <Skill>{skill.children}</Skill>
+          </li>
         ))}
-      </div>
+      </ul>
     </article>
   );
 }

@@ -7,7 +7,7 @@ export default function GameCard() {
       <Image className={style.img} src={wordle} alt="wordle" priority />
       <p>
         I love creating fun and interactive projects with code. Recently, I
-        built a
+        built a{" "}
         <span>
           <a
             className={style.gamename}
@@ -16,7 +16,7 @@ export default function GameCard() {
           >
             word game
           </a>
-        </span>
+        </span>{" "}
         where players guess a five-letter word, and after each attempt, they get
         feedback on how many letters are correct until they find the right word.
       </p>

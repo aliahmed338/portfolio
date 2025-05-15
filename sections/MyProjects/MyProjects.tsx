@@ -3,7 +3,7 @@ import { PROJECTS } from "@/data/data";
 import style from "./MyProjects.module.scss";
 export default function MyProjects() {
   return (
-    <section id="section2" className={style.mywork}>
+    <section id="section2" className={style.mywork} aria-label="Projects Section">
       <h2>My work</h2>
       <div className={style.projects}>
         {PROJECTS.map((project) => (

@@ -3,7 +3,7 @@ import { UXCASESTUDY } from "@/data/data";
 import style from "./UxCaseStudy.module.scss";
 export default function UxCaseStudy() {
   return (
-    <section id="section3" className={style.mywork}>
+    <section id="section3" className={style.mywork} aria-label="Ux Case Studies Section">
       <h2>Case Studies</h2>
       <div className={style.projects}>
         {UXCASESTUDY.map((project) => (

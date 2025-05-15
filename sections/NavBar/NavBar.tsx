@@ -39,14 +39,16 @@ export default function NavBar() {
 
   return (
     <nav className={style.container}>
-      <h1 className={style.Logo}>A.Developer</h1>
-      <div className={style.icons}>
-        {darkMode ? (
-          <Sun className="icon" size="1.5rem" onClick={ModeEffect} />
-        ) : (
-          <Moon className="icon" size="1.5rem" onClick={ModeEffect} />
-        )}
-      </div>
+      <p className={style.Logo}>A.Developer</p>
+      <ul className={style.icons}>
+        <li>
+          {darkMode ? (
+            <Sun className="icon" size="1.5rem" onClick={ModeEffect} />
+          ) : (
+            <Moon className="icon" size="1.5rem" onClick={ModeEffect} />
+          )}
+        </li>
+      </ul>
     </nav>
   );
 }

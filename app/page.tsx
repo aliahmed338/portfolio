@@ -7,13 +7,13 @@ import UxCaseStudy from "@/sections/UxCaseStudy/UxCaseStudy";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <NavBar />
       <AboutMe />
       <Info />
       <MyProjects />
       <UxCaseStudy />
       <ContactMe />
-    </div>
+    </>
   );
 }
