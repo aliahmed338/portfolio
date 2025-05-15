@@ -2,8 +2,8 @@ import style from "./UiuxCard.module.scss";
 
 export default function UiuxCard() {
   return (
-    <div className={style.carduiux}>
-      <h3>What I Do</h3>
+    <article className={style.carduiux}>
+      <h2>What I Do</h2>
       <p>
         I’m a Front-End Developer specializing in React.js, working with both
         TypeScript and JavaScript to build dynamic and interactive web
@@ -15,10 +15,12 @@ export default function UiuxCard() {
         prototyping, ensuring intuitive and visually appealing interfaces. My
         goal is to merge design and development to create seamless digital
         experiences. You can check out my work on{" "}
-        <a href={"https://www.behance.net/3ea1f0ee"} target="_blank">
-          Behance
-        </a>
+        <span>
+          <a href={"https://www.behance.net/3ea1f0ee"} target="_blank">
+            Behance
+          </a>
+        </span>
       </p>
-    </div>
+    </article>
   );
 }

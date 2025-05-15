@@ -3,11 +3,11 @@ import { PROJECTS } from "@/data/data";
 import style from "./MyProjects.module.scss";
 export default function MyProjects() {
   return (
-    <div id="section2" className={style.mywork}>
-      <h3>My work</h3>
+    <section id="section2" className={style.mywork}>
+      <h2>My work</h2>
       <div className={style.projects}>
         {PROJECTS.map((project) => (
-          <div key={project.id} className={style.project}>
+          <article key={project.id} className={style.project}>
             <Image
               className={style.projectimg}
               src={project.image}
@@ -17,38 +17,43 @@ export default function MyProjects() {
               style={{ objectFit: "cover", objectPosition: "top" }}
               loading="lazy"
             />
-            <p className={style.projecttitle}>{project.name}</p>
+            <h3 className={style.projecttitle}>{project.name}</h3>
             <div className={style.content}>
               {project.description.map((description, index) => (
                 <p key={index}>{description}</p>
               ))}
             </div>
-            <div className={style.gitvercel}>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github
-              </a>
-              {project.vercel ? (
+            <ul className={style.gitvercel}>
+              <li>
                 <a
-                  href={project.vercel}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  live
+                  github
                 </a>
-              ) : (
-                ""
-              )}
-            </div>
-          </div>
+              </li>
+              <li>
+                {" "}
+                {project.vercel ? (
+                  <a
+                    href={project.vercel}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    live
+                  </a>
+                ) : (
+                  ""
+                )}
+              </li>
+            </ul>
+          </article>
         ))}
       </div>
-      <div className={style.projectmessage}>
+      <p className={style.projectmessage}>
         Exciting Projects on the Way! 🚀 Stay tuned for more updates!
-      </div>
-    </div>
+      </p>
+    </section>
   );
 }

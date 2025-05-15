@@ -38,6 +38,9 @@
   h6 {
     overflow-wrap: break-word;
   }
+  li {
+    list-style-type: none;
+  }
 }
 
 @layer variables {
@@ -215,12 +218,13 @@
     font-size: 1.75rem;
     font-weight: 650;
   }
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    font-weight: 600;
-  }
+  // h2 {
+  //   font-size: 1.5rem;
+  //   margin-top: 2em;
+  //   margin-bottom: 0.5em;
+  //   font-weight: 600;
+  // }
+  h2,
   h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5em;

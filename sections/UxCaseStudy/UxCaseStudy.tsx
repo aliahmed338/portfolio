@@ -3,11 +3,11 @@ import { UXCASESTUDY } from "@/data/data";
 import style from "./UxCaseStudy.module.scss";
 export default function UxCaseStudy() {
   return (
-    <div id="section3" className={style.mywork}>
-      <h3>Case Studies</h3>
+    <section id="section3" className={style.mywork}>
+      <h2>Case Studies</h2>
       <div className={style.projects}>
         {UXCASESTUDY.map((project) => (
-          <div key={project.id} className={style.project}>
+          <article key={project.id} className={style.project}>
             <Image
               className={style.projectimg}
               src={project.image}
@@ -17,7 +17,7 @@ export default function UxCaseStudy() {
               style={{ objectFit: "cover", objectPosition: "top" }}
               loading="lazy"
             />
-            <p className={style.projecttitle}>{project.name}</p>
+            <h3 className={style.projecttitle}>{project.name}</h3>
             <div className={style.content}>
               {project.description.map((description, index) => (
                 <p key={index}>{description}</p>
@@ -32,16 +32,19 @@ export default function UxCaseStudy() {
                 ""
               )}
             </div>
-          </div>
+          </article>
         ))}
       </div>
-      <div className={style.projectmessage}>
+      <p className={style.projectmessage}>
         If you want to see more, check out my{" "}
-        <a href="https://www.behance.net/3ea1f0ee" target="_blank">
-          Behance
-        </a>{" "}
+        <span>
+          {" "}
+          <a href="https://www.behance.net/3ea1f0ee" target="_blank">
+            Behance
+          </a>{" "}
+        </span>
         for more case studies!
-      </div>
-    </div>
+      </p>
+    </section>
   );
 }

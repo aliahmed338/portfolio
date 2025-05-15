@@ -3,8 +3,8 @@ import Skill from "@/ui/Skill/Skill";
 import style from "./ContactMe.module.scss";
 export default function ContactMe() {
   return (
-    <section id="contactme" className={style.page}>
-      <h3>Contact Me</h3>
+    <footer id="contactme" className={style.page}>
+      <h2>Contact Me</h2>
       <div className={style.sociallayout}>
         {SOCIAL_MEDIA.map((SOCIAL) => (
           <Skill href={SOCIAL.href} key={SOCIAL.name}>
@@ -12,6 +12,6 @@ export default function ContactMe() {
           </Skill>
         ))}
       </div>
-    </section>
+    </footer>
   );
 }

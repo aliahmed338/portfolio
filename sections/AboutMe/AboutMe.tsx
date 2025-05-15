@@ -3,9 +3,9 @@ import GameCard from "@/components/GameCard/GameCard";
 import HelloCard from "@/components/HelloCard/HelloCard";
 export default function AboutMe() {
   return (
-    <div className={style.AboutMe}>
+    <main className={style.AboutMe}>
       <HelloCard />
       <GameCard />
-    </div>
+    </main>
   );
 }

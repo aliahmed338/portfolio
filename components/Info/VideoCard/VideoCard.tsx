@@ -2,7 +2,7 @@ import style from "./VideoCard.module.css";
 
 export default function VideoCard() {
   return (
-    <div className={style.videos}>
+    <aside className={style.videos}>
       <video
         src="https://cdn.dribbble.com/userupload/10636098/file/original-9738e1db7941e9d6dd07f8e6944e6b49.mp4"
         loop
@@ -10,7 +10,7 @@ export default function VideoCard() {
         autoPlay
         preload="none"
       />
-    </div>
+    </aside>
   );
 }
 

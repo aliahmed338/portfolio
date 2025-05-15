@@ -4,10 +4,10 @@ import UiuxCard from "@/components/Info/UiuxCard/UiuxCard";
 import VideoCard from "@/components/Info/VideoCard/VideoCard";
 export default function Info() {
   return (
-    <div className={style.layoutuiux}>
+    <section className={style.layoutuiux}>
       <UiuxCard />
       <SkillsCard />
       <VideoCard />
-    </div>
+    </section>
   );
 }

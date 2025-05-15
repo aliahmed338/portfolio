@@ -16,7 +16,7 @@ export default function HelloCard() {
   };
 
   return (
-    <div className={style.AboutMecard}>
+    <article className={style.AboutMecard}>
       <Welcome />
       <p>
         I started web development with React and front-end technologies and have
@@ -48,6 +48,6 @@ export default function HelloCard() {
           See My Cv
         </a>
       </div>
-    </div>
+    </article>
   );
 }

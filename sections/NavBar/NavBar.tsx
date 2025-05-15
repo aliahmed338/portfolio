@@ -38,7 +38,7 @@ export default function NavBar() {
   }
 
   return (
-    <div className={style.container}>
+    <nav className={style.container}>
       <h1 className={style.Logo}>A.Developer</h1>
       <div className={style.icons}>
         {darkMode ? (
@@ -47,6 +47,6 @@ export default function NavBar() {
           <Moon className="icon" size="1.5rem" onClick={ModeEffect} />
         )}
       </div>
-    </div>
+    </nav>
   );
 }
