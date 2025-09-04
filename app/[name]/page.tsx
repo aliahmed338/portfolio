@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import style from "./projectDetails.module.scss";
 import { PROJECT_DETAILS } from "@/data/data";
