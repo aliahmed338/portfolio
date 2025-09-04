@@ -6,12 +6,15 @@ import { useState } from "react";
 import Skill from "@/ui/Skill/Skill";
 import { notFound } from "next/navigation";
 
-// Define the type for params
-interface PageProps {
-  params: { name: string };
+// Import the correct type for dynamic route params
+import type { NextPage } from "next";
+
+interface Params {
+  name: string;
 }
 
-const Page = ({ params }: PageProps) => {
+// Use NextPage with params type
+const Page: NextPage<{ params: Params }> = ({ params }) => {
   const { name } = params;
   const project = PROJECT_DETAILS.find((p) => p.name === name);
   const [image, setImage] = useState(project?.images[0]?.src || "");
@@ -52,7 +55,6 @@ const Page = ({ params }: PageProps) => {
           <Image
             src={image}
             alt={project.name}
-            layout="responsive"
             width={400}
             height={400}
             style={{
