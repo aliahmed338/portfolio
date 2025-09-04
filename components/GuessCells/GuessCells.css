@@ -1,0 +1,37 @@
+.letter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline-end: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: rgba(147, 155, 159, 0.3);
+}
+
+.correct {
+  background-color: #66a060;
+  color: white;
+  font-weight: 700;
+}
+
+.inCorrect {
+  background-color: #939b9f;
+  color: white;
+  font-weight: 700;
+}
+
+/* .box {
+   background-color: rebeccapurple;
+  height: fit-content;
+  margin-block-end: -3rem; 
+} 
+*/
+
+/* .cell {
+  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  margin-block-end: -3rem;
+} */

@@ -19,3 +19,13 @@ export interface Isocialmedia {
   href: string;
   name: string;
 }
+
+export interface IProjectDetails {
+  id: number;
+  name: string;
+  description: string;
+  images: StaticImageData[];
+  tech: string[];
+  vercel?: string;
+  github?: string;
+}

@@ -2,44 +2,124 @@
   grid-area: Card;
   background-color: var(--color-card-background);
   box-shadow: var(--shadow-card);
-  padding: 2rem;
-  padding-block-start: 10rem;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  padding-block-start: 5rem;
   border-radius: 0.5rem;
   position: relative;
 }
-.CardGame .gamename {
+
+/* .CardGame .gamename {
   background-color: var(--color-decorative-500);
   text-decoration: underline;
   font-weight: 500;
   cursor: pointer;
-}
+} */
+
 .CardGame .img {
-  width: 12rem;
+  width: 8rem;
   height: auto;
   position: absolute;
-  left: 50%;
+  left: 75%;
   transform: translateX(-50%);
   z-index: 1;
-  top: -5rem;
-  border: 3px solid var(--color-gray-900);
+  top: -6rem;
+  border-end-end-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
+
+.result {
+  width: 11rem;
+  height: auto;
+  position: absolute;
+  left: 33.1%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: -6rem;
+  background-color: #131313;
+  padding: 0.5rem;
+  color: #fff;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  height: 148.5px;
+}
+
 @media (max-width: 900px) {
-  .CardGame .img {
+  .CardGame {
     position: relative;
+    padding-block-start: 6rem; /* Maintain space for side-by-side elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 7rem;
+  }
+
+  .CardGame .img,
+  .result {
+    position: absolute;
+    transform: translateX(-50%);
+    height: 148.5px; /* Match .result height for consistency */
+    top: -6rem;
+  }
+
+  .CardGame .img {
+    left: 60%; /* Adjusted to position image to the right */
+    width: 8rem;
+    background-color: transparent;
+  }
+
+  .result {
+    left: 34%; /* Adjusted to position result to the left */
+    width: 11rem;
+    background-color: #131313;
+    padding: 0.5rem;
   }
 }
 
 @media (max-width: 700px) {
   .CardGame {
-    position: relative;
+    padding-block-start: 5rem; /* Slightly reduce top padding */
+    margin-block-start: 5rem;
+  }
+
+  .CardGame .img,
+  .result {
+    width: 7rem; /* Scale down for smaller screens */
+    height: 120px; /* Adjust height proportionally */
+    top: -5rem; /* Adjust top positioning */
+  }
+
+  .result {
+    width: 10rem;
+    left: 40%; /* Fine-tune positioning */
+  }
+
+  .CardGame .img {
+    left: 70%; /* Fine-tune positioning */
   }
 }
 
 @media (max-width: 500px) {
+  .CardGame {
+    padding-inline: 1rem;
+    padding-block-start: 4rem; /* Further reduce top padding */
+  }
+
+  .CardGame .img,
+  .result {
+    width: 6rem; /* Further scale down */
+    height: 100px; /* Adjust height */
+    top: -4rem; /* Adjust top positioning */
+  }
+
+  .result {
+    width: 9rem;
+    left: 35%; /* Fine-tune for small screens */
+    padding: 0.3rem;
+  }
+
   .CardGame .img {
-    position: relative;
-    background-color: red;
-    padding-block-end: -1rem;
+    left: 70%; /* Fine-tune for small screens */
   }
 }
 

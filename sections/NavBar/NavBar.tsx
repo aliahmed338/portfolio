@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Sun, Moon } from "react-feather";
 import style from "./NavBar.module.scss";
 import useSound from "use-sound";
+import Link from "next/link";
 
 export default function NavBar() {
   const [darkMode, setDarkMode] = useState<boolean | null>(null);
@@ -39,7 +40,9 @@ export default function NavBar() {
 
   return (
     <nav className={style.container}>
-      <p className={style.Logo}>A.Developer</p>
+      <Link href={"/"} className={style.Logo}>
+        A.Developer
+      </Link>
       <ul className={style.icons}>
         <li>
           {darkMode ? (

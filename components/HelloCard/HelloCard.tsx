@@ -42,7 +42,7 @@ export default function HelloCard() {
         </Button>
         <a
           className="Mycv"
-          href="https://drive.google.com/file/d/1jjt_QEfS4YQEptmusuady9hc8HDMzpzL/view?usp=sharing"
+          href="https://drive.google.com/file/d/1f-DOL-eO8e2hgB-mIJ4GVtNK0HgE_ZeH/view?usp=sharing"
           target="_blank"
         >
           See My Cv

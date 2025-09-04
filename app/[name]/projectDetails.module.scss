@@ -1,0 +1,257 @@
+.projectDetails {
+  z-index: 1;
+  padding: 2rem;
+  margin: 0 auto;
+  border: var(--color-card-border);
+  background-color: var(--color-page-background);
+  margin-block-start: 3rem;
+  margin-block-end: 4rem;
+  border-radius: 1rem;
+  max-width: var(--content-width);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-block-start: 1rem;
+
+    .imageContainer {
+      width: 60%;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: var(--color-card-background);
+      border: var(--color-card-border);
+      box-shadow: var(--shadow-page);
+
+      img {
+        border-radius: 0.5rem;
+        border: 8px solid var(--color-primary-300);
+        font-weight: 500;
+        transition: all 200ms;
+      }
+    }
+    .containerinfo {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      .images {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: start;
+        gap: 1rem;
+        justify-content: space-between;
+        background-color: var(--color-card-background);
+        border: var(--color-card-border);
+        box-shadow: var(--shadow-page);
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+
+      .images :global(img) {
+        border-radius: 0.5rem;
+        object-fit: cover;
+        border: 3px solid var(--color-primary-300);
+        font-weight: 500;
+        transition: all 200ms;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .tech {
+        margin-block-start: 1rem;
+        background-color: var(--color-card-background);
+        border: var(--color-card-border);
+        box-shadow: var(--shadow-page);
+        padding: 2rem;
+        border-radius: 1rem;
+
+        .Skillscontent {
+          display: flex;
+          justify-content: flex-start;
+          border-radius: 0.5rem;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+
+          .list {
+            border: 1px solid var(--color-gray-300);
+            padding-inline: 0.5rem;
+            padding-block: 0.3rem;
+            border-radius: 0.2rem;
+            transition: transform 0.2s;
+            font-size: 1rem;
+
+            &:hover {
+              text-underline-offset: 0.175em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.description {
+  margin-block: 3rem;
+  background-color: var(--color-card-background);
+  border: var(--color-card-border);
+  box-shadow: var(--shadow-page);
+  border-radius: 1rem;
+
+  .descriptioncontent {
+    z-index: 1;
+    padding: 2rem;
+    margin-block: 1rem;
+    max-width: var(--content-width);
+  }
+}
+
+.gitvercel {
+  padding-inline-start: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  a {
+    font-weight: 700;
+  }
+}
+
+.titlegithub {
+  display: flex;
+  justify-content: space-between;
+
+  .projecttitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .projectDetails {
+    width: 36rem;
+    padding: 1.5rem;
+    margin-block-start: 2rem;
+    margin-block-end: 3rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+    min-width: 500px;
+    padding: 0.75rem;
+
+    img {
+      border-width: 6px;
+    }
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .containerinfo {
+      min-width: 100%;
+      .images {
+        padding: 1.5rem;
+        gap: 0.75rem;
+        justify-content: center;
+        width: 100%;
+
+        :global(img) {
+          width: 80px;
+          height: 70px;
+          border-width: 2px;
+        }
+      }
+
+      .tech {
+        padding: 1.5rem;
+        margin-block-start: 0.75rem;
+
+        .Skillscontent {
+          gap: 0.4rem;
+
+          .list {
+            font-size: 0.9rem;
+            padding-inline: 0.4rem;
+            padding-block: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    margin-block: 3rem;
+
+    .descriptioncontent {
+      padding: 1.5rem;
+    }
+  }
+
+  .gitvercel {
+    padding-inline-start: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectDetails {
+    width: 21rem;
+    padding: 1rem;
+    margin-block-start: 1.5rem;
+    margin-block-end: 2rem;
+  }
+
+  .container {
+    gap: 1rem;
+
+    .imageContainer {
+      padding: 0.5rem;
+      width: 100%;
+      min-width: 300px;
+      background-color: black;
+
+      img {
+        border-width: 4px;
+      }
+    }
+
+    .containerinfo {
+      .images {
+        padding: 1rem;
+        gap: 0.5rem;
+
+        :global(img) {
+          width: 60px;
+          height: 50px;
+        }
+      }
+
+      .tech {
+        padding: 1rem;
+
+        .Skillscontent {
+          gap: 0.3rem;
+
+          .list {
+            font-size: 0.8rem;
+            padding-inline: 0.3rem;
+            padding-block: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    margin-block: 3rem;
+
+    .descriptioncontent {
+      padding: 1rem;
+    }
+  }
+}
