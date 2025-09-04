@@ -5,13 +5,7 @@ import { PROJECT_DETAILS } from "@/data/data";
 import { useState } from "react";
 import Skill from "@/ui/Skill/Skill";
 
-interface PageProps {
-  params: {
-    name: string;
-  };
-}
-
-const Page = ({ params }: PageProps) => {
+const Page = ({ params }: { params: { name: string } }) => {
   const { name } = params;
   const project = PROJECT_DETAILS.find((p) => p.name === name);
   const [image, setImage] = useState(project!.images[0].src);
