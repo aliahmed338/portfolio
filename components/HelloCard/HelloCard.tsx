@@ -19,18 +19,18 @@ export default function HelloCard() {
     <article className={style.AboutMecard}>
       <Welcome />
       <p>
-        I started web development with React and front-end technologies and have
-        been building ever since.
+        I’m a web developer specializing in React, TypeScript, and Next.js, with
+        hands-on experience in building e-commerce platforms, note-taking apps,
+        and blogs.
       </p>
       <p>
-        I have worked on multiple projects, including e-commerce platforms, and
-        note-taking applications. My experience includes using React,
-        TypeScript, and UI/UX design principles to create user-friendly
-        interfaces.
+        I’m also learning backend technologies like Node.js, Express, and
+        MongoDB, and currently creating MERN stack e-commerce applications to
+        develop full-stack solutions.
       </p>
       <p>
-        Currently, I’m focused on expanding my skills, working on innovative
-        projects.
+        Currently, I’m focused on expanding my skill set and working on
+        innovative, user-centered projects.
       </p>
 
       <div className={style.btnlayout}>

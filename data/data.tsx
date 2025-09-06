@@ -1,7 +1,5 @@
 import noteApp from "@/public/projects/note-app.webp";
-import freshApp from "@/public/projects/fresh-app.webp";
 import portoApp from "@/public/projects/porto-app.webp";
-import cvApp from "@/public/projects/cv-app.webp";
 import Exclucive from "@/public/projects/screencapture-e-commerce-v1-ochre-vercel-app-2024-07-27-16_20_53.webp";
 import cyborg from "@/public/projects/screencapture-cyborg-mu-vercel-app-2024-07-27-16_27_43.webp";
 import wordGame from "@/public/projects/word-game.webp";
@@ -11,6 +9,7 @@ import Tawaazon from "@/public/projects/tawaazon.webp";
 import EasyInvo from "@/public/projects/invoice.webp";
 import Blog from "@/public/projects/blog-details-4.png";
 import storeProductDetails from "@/public/projects/store-product-details.png";
+
 import {
   Iprojects,
   Iskills,
@@ -31,6 +30,12 @@ import store3 from "@/public/projects/store-invoice.png";
 import store4 from "@/public/projects/store-orders.png";
 import store5 from "@/public/projects/store-profile.png";
 import store6 from "@/public/projects/store-order-details.png";
+
+import store10 from "@/public/projects/cart-store.png";
+import store11 from "@/public/projects/details-store.png";
+import store12 from "@/public/projects/wishlist-store.png";
+import store13 from "@/public/projects/dark-store.png";
+import store14 from "@/public/projects/dark-store-2.png";
 
 export const SKILLS: Iskills[] = [
   {
@@ -172,20 +177,19 @@ export const PROJECTS: Iprojects[] = [
       "- Supports Stripe payments, email via Resend & React Email.",
     ],
     image: EasyInvo,
-    github: "https://github.com/aliahmed200/invoice-app",
     vercel: "https://invoice-app-flax-seven.vercel.app/",
   },
   {
     id: 4,
-    name: "Exclusive",
+    name: "Cloth-Store",
     description: [
       "- An advanced e-commerce website with React.js.",
       "- Features seamless API integration with Axios.",
       "- Designed for a smooth shopping experience.",
     ],
     image: Exclucive,
-    github: "https://github.com/aliahmed200/E-commerce-ts",
-    vercel: "https://e-commerce-v1-ochre.vercel.app/",
+    github: "https://github.com/aliahmed338/cloth-store",
+    vercel: "https://cloth-store-rose.vercel.app/",
   },
   {
     id: 5,
@@ -196,7 +200,6 @@ export const PROJECTS: Iprojects[] = [
       "- Uses Formik and Yup for smooth form validation.",
     ],
     image: noteApp,
-    github: "https://github.com/aliahmed200/note-app",
     vercel: "https://note-app-my-new-branch.vercel.app/login",
   },
 
@@ -210,7 +213,6 @@ export const PROJECTS: Iprojects[] = [
     ],
     image: wordGame,
     vercel: "https://word-game-weld.vercel.app/",
-    github: "https://github.com/aliahmed200/Word-Game",
   },
   {
     id: 7,
@@ -221,34 +223,11 @@ export const PROJECTS: Iprojects[] = [
       "- Displays temperature, humidity, and wind speed",
     ],
     image: WeatherApp,
-    vercel: "https://weather-app-green-six-91.vercel.app/",
-    github: "https://github.com/aliahmed200/weather-app",
+    vercel: "https://weather-app-ochre-ten-44.vercel.app/",
+    github: "https://github.com/aliahmed338/weather-app",
   },
   {
     id: 8,
-    name: "Fresh-Cart",
-    description: [
-      "- An online shopping platform built with React.js.",
-      "- Integrated with an API using Axios.",
-      "- Features secure authentication and a user-friendly cart.",
-    ],
-    image: freshApp,
-    github: "https://github.com/aliahmed200/E-commerce",
-  },
-  {
-    id: 9,
-    name: "JobJunction",
-    description: [
-      "- A CV builder app using React and Tailwind CSS.",
-      "- Users can customize templates and download PDFs.",
-      "- Designed for effortless resume creation.",
-    ],
-    image: cvApp,
-    vercel: "https://cv-builder-newversion.vercel.app/",
-    github: "https://github.com/aliahmed200/cv-builder",
-  },
-  {
-    id: 10,
     name: "My-Old-Portfolio",
     description: [
       "- A modern portfolio built with React and TypeScript.",
@@ -257,10 +236,9 @@ export const PROJECTS: Iprojects[] = [
     ],
     image: portoApp,
     vercel: "https://portfolio-three-sandy-24.vercel.app/",
-    github: "https://github.com/aliahmed200/portfolio",
   },
   {
-    id: 11,
+    id: 9,
     name: "CYBORG",
     description: [
       "- A dynamic gaming website with React and TypeScript.",
@@ -268,8 +246,8 @@ export const PROJECTS: Iprojects[] = [
       "- Fully responsive with smooth SPA navigation.",
     ],
     image: cyborg,
-    vercel: "https://cyborg-mu.vercel.app/",
-    github: "https://github.com/aliahmed200/cyborg",
+    vercel: "https://cyborg-six.vercel.app/",
+    github: "https://github.com/aliahmed338/cyborg",
   },
 ];
 
@@ -329,18 +307,26 @@ export const PROJECT_DETAILS: IProjectDetails[] = [
       "EasyInvo is an invoicing app built with Next.js and Prisma for efficient database management.\nSupports full CRUD operations for invoices with Stripe for payments.\nUses Resend and React Email for automated invoice emails and reminders.\nFeatures secure authentication, PDF generation, and a responsive interface.",
     images: [EasyInvo],
     tech: ["Next.js", "Prisma", "Stripe", "Resend", "React Email"],
-    github: "https://github.com/aliahmed200/invoice-app",
     vercel: "https://invoice-app-flax-seven.vercel.app/",
   },
   {
     id: 4,
-    name: "Exclusive",
+    name: "Cloth-Store",
     description:
       "Exclusive is an e-commerce website built with React.js and Axios for API integration.\nOffers product browsing, shopping cart management, and secure checkout.\nIncludes responsive design, accessibility features, and performance optimizations.\nProvides a premium shopping experience with smooth navigation.",
-    images: [Exclucive],
-    tech: ["React.js", "Axios"],
-    github: "https://github.com/aliahmed200/E-commerce-ts",
-    vercel: "https://e-commerce-v1-ochre.vercel.app/",
+    images: [Exclucive, store10, store11, store12, store13, store14],
+    tech: [
+      "React.js",
+      "Axios",
+      "Type script",
+      "Yup",
+      "useFormik",
+      "Toaster",
+      "tailwind css",
+      "axios",
+    ],
+    github: "https://github.com/aliahmed338/cloth-store",
+    vercel: "https://cloth-store-rose.vercel.app/",
   },
   {
     id: 5,
@@ -349,7 +335,6 @@ export const PROJECT_DETAILS: IProjectDetails[] = [
       "Note App is a simple note-taking tool built with React.js, Formik, and Yup.\nUsers can add, edit, and delete notes with local storage for persistence.\nFeatures search, categorization with tags, and a responsive interface.\nEnsures privacy with client-side data and keyboard shortcuts for efficiency.",
     images: [noteApp],
     tech: ["React.js", "Formik", "Yup"],
-    github: "https://github.com/aliahmed200/note-app",
     vercel: "https://note-app-my-new-branch.vercel.app/login",
   },
   {
@@ -360,7 +345,6 @@ export const PROJECT_DETAILS: IProjectDetails[] = [
     images: [wordGame],
     tech: ["React", "TypeScript"],
     vercel: "https://word-game-weld.vercel.app/",
-    github: "https://github.com/aliahmed200/Word-Game",
   },
   {
     id: 7,
@@ -369,30 +353,11 @@ export const PROJECT_DETAILS: IProjectDetails[] = [
       "Weather App provides real-time forecasts using the OpenWeatherMap API.\nUsers can search cities, view detailed weather data, and get alerts.\nBuilt with React, it supports geolocation, theme switching, and offline caching.\nFully responsive with intuitive icons and unit conversions.",
     images: [WeatherApp],
     tech: ["React", "OpenWeatherMap API"],
-    vercel: "https://weather-app-green-six-91.vercel.app/",
-    github: "https://github.com/aliahmed200/weather-app",
+    vercel: "https://weather-app-ochre-ten-44.vercel.app/",
+    github: "https://github.com/aliahmed338/weather-app",
   },
   {
     id: 8,
-    name: "Fresh-Cart",
-    description:
-      "Fresh Cart is an e-commerce platform for groceries built with React.js and Axios.\nFeatures secure authentication, product filtering, and a synced shopping cart.\nIncludes admin tools, wishlists, and performance optimizations.\nOffers a responsive, user-friendly design for seamless shopping.",
-    images: [freshApp],
-    tech: ["React.js", "Axios"],
-    github: "https://github.com/aliahmed200/E-commerce",
-  },
-  {
-    id: 9,
-    name: "JobJunction",
-    description:
-      "JobJunction is a CV builder built with React and Tailwind CSS.\nUsers can create, customize, and download professional resumes as PDFs.\nFeatures template selection, real-time previews, and drag-and-drop sections.\nResponsive and accessible with spell-checking and content tips.",
-    images: [cvApp],
-    tech: ["React", "Tailwind CSS"],
-    vercel: "https://cv-builder-newversion.vercel.app/",
-    github: "https://github.com/aliahmed200/cv-builder",
-  },
-  {
-    id: 10,
     name: "My-Old-Portfolio",
     description:
       "My Old Portfolio is a personal showcase built with React and TypeScript.\nFeatures dark/light mode, smooth navigation, and animated sections.\nOptimized for SEO, responsive across devices, and includes analytics.\nIdeal for displaying projects, skills, and contact info.",
@@ -402,14 +367,14 @@ export const PROJECT_DETAILS: IProjectDetails[] = [
     github: "https://github.com/aliahmed200/portfolio",
   },
   {
-    id: 11,
+    id: 9,
     name: "CYBORG",
     description:
       "CYBORG is a gaming platform built with React and TypeScript.\nIncludes game browsing, live streams, user profiles, and community forums.\nFeatures real-time updates, responsive design, and accessibility support.\nIdeal for gamers to connect, stream, and engage.",
     images: [cyborg],
     tech: ["React", "TypeScript"],
-    vercel: "https://cyborg-mu.vercel.app/",
-    github: "https://github.com/aliahmed200/cyborg",
+    vercel: "https://cyborg-six.vercel.app/",
+    github: "https://github.com/aliahmed338/cyborg",
   },
 ];
 
@@ -419,7 +384,7 @@ export const SOCIAL_MEDIA: Isocialmedia[] = [
     name: "facebook",
   },
   {
-    href: "https://github.com/aliahmed200",
+    href: "https://github.com/aliahmed338",
     name: "gitHub",
   },
   {
@@ -427,7 +392,7 @@ export const SOCIAL_MEDIA: Isocialmedia[] = [
     name: "telegram",
   },
   {
-    href: "mailto:aliahmed60345@gmail.com",
+    href: "mailto:alidev338@gmail.com",
     name: "gmail",
   },
   {

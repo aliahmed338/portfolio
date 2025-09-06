@@ -18,11 +18,18 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
       <div className={style.titlegithub}>
         <h1>{project.name}</h1>
         <ul className={style.gitvercel}>
-          <li>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              github
-            </a>
-          </li>
+          {project.github && (
+            <li>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github
+              </a>
+            </li>
+          )}
+
           {project.vercel && (
             <li>
               <a

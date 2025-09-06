@@ -31,17 +31,18 @@ export default function MyProjects() {
               ))}
             </div>
             <ul className={style.gitvercel}>
+              {project.github && (
+                <li>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github
+                  </a>
+                </li>
+              )}
               <li>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  github
-                </a>
-              </li>
-              <li>
-                {" "}
                 {project.vercel ? (
                   <a
                     href={project.vercel}

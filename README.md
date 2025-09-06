@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Portfolio Website
 
-## Getting Started
+A beautiful, responsive portfolio website built with Next.js and pure CSS. It features dark and light mode support, showcases information about me, my skills, and contact details. It also includes a small Wordle game where you guess words in five tries.
 
-First, run the development server:
+
+## Installation
+
+Clone the repo and install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🎨 Dark and Light mode toggle with sound effects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🔊 Interactive sound feedback on button clicks using use-sound package
 
-## Learn More
+- 📱 Fully responsive design for all devices
 
-To learn more about Next.js, take a look at the following resources:
+- 👤 About section with personal info and skills
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 📞 Contact form for easy communication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🎮 Embedded Wordle game to guess words in five tries
 
-## Deploy on Vercel
+- ⚡ Built with:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   - Next.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - Pure CSS
+
+- ✅ Clean and modern design
+
+## 👤 Author
+
+Built by Ali Ahmed
